@@ -4,12 +4,14 @@
     box-sizing: border-box;
     font-family: 'poppins';
 }
+body{
+    overflow-x: hidden !important;
+}
 body::-webkit-scrollbar{
     display: none;
 }
 section{
     width: 100%;
-    min-height: 100vh;
 }
 section.hero{
     height: 112vh;
@@ -33,9 +35,6 @@ img.mute{
     bottom: 10vh;
     right: 3%;
     cursor: pointer;
-}
-img.mute.muted{
-    src: url(./tiptop_files/unmute.svg);
 }
 div.nav{
     width: 100%;
@@ -111,22 +110,25 @@ nav a{
 /* every step counts start */
 section.every-step{
     background: url(./tiptop_files/vision_lines_bg.dd950598fd6a14f1e897.png) #001B26;
+    background-size: contain;
     height: 144vh;
     position: relative;
 }
 div.phone{
     background: url(./tiptop_files/vision_triangles_bg_test.ba50067759b8ffa1fa7d.jpg);
+    background-position: center center;
     background-size: cover;
     width: 93%;
-    height: 150vh;
+    min-height: 140vh;
     padding-left: 20px;
-    border-radius: 40px;
+    border-radius: 20px;
     position: absolute;
     top: -40px;
     right: 50px;
 }
 div.content{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 div.phone h2{
     font-size: 72px;
@@ -141,6 +143,14 @@ div.phone p{
     font-weight: 400;
     margin: 90px 0;
 }
+div.phone .phone-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.phone .phone-img video{
+    width: 90%;
+}
 div.phone a{
     text-decoration: none;
 }
@@ -150,7 +160,7 @@ div.phone .btn-green{
 div.svgs{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 40px;
+    margin-top: 100px;
 }
 div.items{
     display: flex;
@@ -176,7 +186,7 @@ div.items span{
 section.small-step{
     background-color: #001B26;
     padding-top: 120px;
-    height: 159vh;
+    min-height: 159vh;
 }
 section.small-step div.content-wrapper{
     display: flex;
@@ -267,7 +277,6 @@ section.join-us{
     background-color: #35A6B6;
     padding: 150px 0;
     padding-left: 150px;
-    height: 150vh;
 }
 section div.join-us{
     display: flex;
@@ -275,7 +284,7 @@ section div.join-us{
     align-items: center
 }
 section div.join-us video{
-    width: 35%;
+    width: 40%;
 }
 section div.join-us div.three-steps{
     display: flex;
@@ -285,6 +294,7 @@ section div.join-us div.three-steps{
 section div.join-us div.three-steps h1{
     font-size: 60px;
     font-weight: 700;
+    width: 600px;
     color: #fff;
     margin-bottom: 80px;
 }
@@ -322,9 +332,6 @@ section div.join-us div.three-steps div.google-play{
 }
 /* join us ends */
 /* roadmap starts */
-section#roadmap{
-    height: 2163px;
-}
 div.roadmap{
     background-image: url(./tiptop_files/roadmap_map.288be8f6d6113fcefffe.jpg);
     background-position: center 0px;
@@ -371,6 +378,10 @@ section.the-team div.team-flex span{
     display: block;
     color: #ffffffa8;
     margin-bottom: 10px;
+}
+section.the-team div.team-flex img [src="./tiptop_files/linked-in-team.svg"]{
+    width: 15px;
+    height: 15px;
 }
 .team-flex div img.mates{
     width: 220px;
@@ -534,6 +545,9 @@ footer{
     display: flex;
     min-height: 450px;
 }
+#footer .application{
+    display: flex;
+}
 footer .footer-logo img{
     width: 210px;
 }
@@ -598,6 +612,7 @@ p.copyright{
 /* end subscription */
 
 /* Media Querries */
+
 @media screen and (max-width: 1200px){
     img[src="./tiptop_files/bars.svg"]{
         display: block;
@@ -611,4 +626,392 @@ p.copyright{
         justify-content: space-between;
     }
 }
+
+/* tablet media querry */
+@media screen and (max-width: 1024px){
+    video.hero, video.city {
+        display: none;
+    }
+    section{
+        height: auto;
+    }
+    section.hero{
+        height: 90px;
+        background-color: #001B26;
+    }
+    img.mute{
+        display: none;
+    }
+
+    /* every step counts */
+    section.every-step{
+        background-size: cover;
+    }
+    div.phone h2{
+        font-size: 50px;
+        line-height: initial;
+        margin-top: 0;
+    }
+    div.phone{
+        width: 98%;
+        position: initial;
+        margin: auto;
+        padding: 40px;
+    }
+    div.content{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    div.phone p{
+        font-size: 16px;
+        margin: 25px 0 50px;
+    }
+    div.phone .phone-img video{
+        width: 60%;
+    }
+    div.svgs{
+        margin-top: 50px;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    div.items span{
+        font-size: 20px;
+    }
+    /* every step counts ends*/
+    
+    /* small step starts */
+    section.small-step{
+        padding: 590px 0 0 0;
+    }
+    header.small-step h1{
+        font-size: 48px;
+    }
+    header.small-step p{
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    section.small-step div.content-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 30px;
+    }
+    section.small-step div.content-wrapper img{
+        width: 93%;
+    }
+    div.text{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+    div.content-wrapper div p{
+        font-size: 20px;
+    }
+    /* small step ends */
+
+    /* join us start */
+    section.join-us{
+        padding: 150px 30px;
+    }
+    section div.join-us div.three-steps h1{
+        font-size: 48px;
+        margin-bottom: 0;
+    }
+    section div.join-us{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    section div.join-us video{
+        width: 100%;
+        margin: auto;
+    }
+    section div.join-us div.three-steps div.items span{
+        padding: 30px;
+        width: 0;
+        height: 0;
+        font-size: 25px;
+    }
+    /* join us ends */
+
+    /* roadmap starts  */
+    div.roadmap{
+        background-image: url(./tiptop_files/roadmap_mob.3be4bd09e04775759f98.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 160px 0px 20px;
+        position: relative;
+        transition: all 0.5s ease 0s;
+        height: 710px;
+    }
+    /* roadmap ends  */
+    section.city{
+        display: none;
+    }
+
+    /* the team  */
+    section.the-team div.team-flex{
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding: 0;
+    }
+    section.the-team div.team-flex .mates{
+        width: 200px;
+        height: 200px;
+    }
+    /* the team ends  */
+
+    /* ecosystem */
+    section#ecosystem .ecosystem{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0;
+        gap: 3rem;
+        text-align: center;
+    }
+    section#ecosystem .ecosystem .eco-video video{
+        width: 470px;
+    }
+    section#ecosystem .eco-info h2{
+        font-size: 30px;
+    }
+    section#ecosystem .eco-info p{
+        font-size: 16px;
+        width: 600px;
+        margin-bottom: 80px;
+    }
+    .btn-wrapper.one{
+        margin: auto;
+        display: inline-block;
+    }
+    /* ecosystem ends*/
+
+    /* FAQs */
+    section#FAQs{
+        padding: 100px 15px;
+    }
+    section#FAQs .btn-holder{
+        margin-top: 60px;
+    }
+    section#FAQs h1{
+        font-size: 48px;
+    }
+    /* FAQs ends*/
+
+    /* subscription */
+    section#subscription .subscription{
+        width: 96%;
+        height: 375px;
+        padding: 40px 0;
+    }
+    section#subscription .subscription h1{
+        font-size: 32px;
+    }
+    section#subscription .subscription h2{
+        font-size: 13.5px;
+        line-height: initial;
+        margin: 10px auto 30px;
+    }
+    section#subscription .subscription .checkbox{
+        margin-top: 25px;
+    }
+    section#subscription .subscription input[type="submit"]{
+        margin-top: 40px;
+    }
+    /* subscription ends*/
+
+    /* footer */
+    footer{
+        padding: 30px 0;
+    }
+    #footer{
+        flex-direction: column;
+    }
+    footer .footer-logo{
+        min-width: 100%;
+        margin: 0;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+    footer .footer-logo img{
+        width: 200px;
+    }
+    footer .footer-logo p{
+        font-size: 16px;
+        max-width: 700px;
+        margin: 0 20%;
+    }
+    footer .footer-logo .download{
+        gap: 1rem;
+    }
+    #footer .application{
+        justify-content: space-between;
+        padding: 0 20%;
+    }
+    .section{
+        margin: 25px 0;
+        text-align: center;
+    }
+    .section-title{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .section a{
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .community{
+        width: 100%;
+        text-align: center;
+        padding: 0 20%;
+    }
+    #footer div .policy{
+        width: 85%;
+        font-size: 16px;
+        margin: 30px auto;
+    }
+    p.copyright{
+        font-size: 16px;
+    }
+    .social{
+        display: flex;
+        height: 50px;
+        width: 80%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .social img{
+        height: 40px;
+        width: 40px;
+    }
+    /* footer ends */
+}
+/* tablet media querry ends*/
+
+/* big phone screen size */
+@media screen and (max-width:765px){
+    .btn-white:hover{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .btn-white, .btn-green{
+        padding: 10px;
+        font-size: 14px;
+    }
+    div.phone .phone-img video{
+        width: 100%;
+    }
+    
+    /* small step starts */
+    section.small-step{
+        padding: 680px 0 0 0;
+    }
+    header.small-step h1{
+        font-size: 48px;
+    }
+    section.small-step div.content-wrapper{
+        grid-template-columns: 1fr;
+    }
+    /* small step ends */
+
+    /* nfts starts */
+    #sneaker{
+        padding: 0 0 30px 0;
+    }
+    #sneaker .container{
+        grid-template-columns: 1fr;
+    }
+    #sneaker .container button{
+        width: 100%;
+    }
+    #sneaker .container .video{
+        margin-top: 80px;
+    }
+    /* nfts ends */
+
+    /* join us starts */
+    section div.join-us{
+        grid-template-columns: 1fr;
+    }
+    section div.join-us video{
+        width: 100%;
+    }
+    section.join-us{
+        padding: 50px 20px;
+    }
+    section div.join-us div.three-steps h1{
+        width: 100%;
+    }
+    section div.join-us .google-play{
+        align-items: center;
+        justify-content: center;
+    }
+    /* join us ends */
+
+    /* FAQs starts */
+    section#FAQs .btn-holder button{
+        font-size: 16px;
+    }
+    section#FAQs{
+        height: auto;
+    }
+    .social{
+        gap: 1rem;
+        margin: auto;
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #footer div .policy{
+        width: 100%;
+        margin: 80px 0 30px;
+    }
+    div.community{
+        width: 100%;
+        padding: 0 20px;
+    }
+    #footer .application{
+        padding: 0 20%;
+    }
+    /* FAQs ends */
+
+}
+/* big phone screen size ends*/
+
+/* small phone screen size*/
+@media screen and (max-width: 560px){
+    .phone .content .btn-green, .phone .content .btn-white{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .phone .content .btn-green{
+        margin-bottom: 20px;
+    }
+    section div.join-us div.three-steps h1{
+        margin-bottom: 30px;
+    }
+    section#subscription .subscription{
+        padding: 40px 20px;
+        height: auto;
+        width: 93%;
+    }
+    section#subscription .subscription h1{
+        width: 323px;
+        margin: auto;
+    }
+    section#subscription .subscription h2{
+        width: 386px;
+    }
+    section#subscription .subscription input[type="email"]{
+        width: 100%;
+    }
+}
+/* small phone screen size ends*/
 /* end Media Querries */
