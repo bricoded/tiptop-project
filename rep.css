@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 130vh;
+    width: 100%;
+    background-image: url(./tiptop_files/hero_bg.087e8ac4357ee2082659.png);
+    background-size: auto 150%;
+    background-position:  right center;
+    background-repeat: no-repeat;
+    background-color: #001b2c;
+    font-family: poppins;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+div.pop-up{
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 380px;
+height: 400px;
+background-color: #35a6b6;
+border-radius: 15px;
+padding: 40px;
+text-align: center;
+display: none;
+}
+div.pop-up.block{
+display: block;
+}
+div.pop-up h2{
+font-size: 38px;
+color: white;
+margin-bottom: 25px;
+}
+div.pop-up img{
+width: 200px;
+}
+nav{
+width: 100%;
+display: flex;
+background-color: rgba(0, 0, 0, 0.3);
+backdrop-filter: blur(15px);
+padding: 20px 25px;
+font-size: 14px;
+font-weight: 600;
+width: 100%;
+z-index: 2;
+position: fixed;
+}
+.nav-links{
+display: flex;
+align-items: center;
+margin-left: 40px;
+gap: 2rem;
+}
+nav img[src = "./tiptop_files/logo.c5bda3ac6c062cdbd23697a4c38d7d13.svg"]{
+width: 128.56px;
+}
+img[src="./tiptop_files/bars.svg"], img[src="./tiptop_files/close-bars.svg"]{
+display: none;
+cursor: pointer;
+}
+nav ul{
+display: inline-flex;
+gap: 12px;
+list-style: none;
+}
+nav ul li:nth-child(5){
+display: none;
+}
+nav ul li a{
+color: white;
+text-decoration: none;
+font-size: 13px;
+transition: .5s ease forwards;
+}
+li button{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .5s ease forwards;
+    background-color: transparent; 
+    border: none;
+    font-family: poppins;
+    cursor: pointer;
+}
+nav ul li a:hover , li button:hover{
+border-bottom: 2px solid #35a6b6;
+}
+nav a{
+color: white;
+text-decoration: none;
+}
+nav .btn-wrapper{
+gap: 4px;
+}
+nav .btn-green, nav .btn-white{
+margin: 0;
+font-size: 14px;
+}
+.btn-wrapper{
+display: flex;
+gap: 13px;
+}
+.btn-green{
+padding: 10px 25px;
+background-color: #35a6b6;
+border-radius: 10px;
+color: white;
+font-size: 16px;
+transition: .3s ease all;
+margin-right: 20px;
+border: 2px solid #35a6b6;
+font-weight: 700;
+}
+.btn-green:hover{
+background-color: #26808c;
+}
+.btn-white{
+padding: 10px 25px;
+color: #35a6b6;
+border: 1px solid #35a6b6;
+border-radius: 10px;
+font-size: 14px;
+background-color: transparent;
+font-weight: 700;
+transition: .3s ease all;
+}
+.btn-white:hover{
+background-color: #000b1092;
+}
+img[src="./tiptop_files/triangle.svg"]{
+position: absolute;
+top: 0px;
+left: 0px;
+height: 380px;
+z-index: -10;
+height: 160px;
+margin-top: 30px;
+}
+@media screen and (max-width: 1200px){
+img[src="./tiptop_files/bars.svg"], img[src="./tiptop_files/close-bars.svg"]{
+display: block;
+z-index: 100;
+}
+nav .nav-links{
+position: absolute;
+right: -200px;
+display: none;
+top: 8vh;
+display: initial;
+width: 200px;
+background-color: #001B26;
+box-shadow: 5px 10px 25px rgba(0, 0, 0, 0.608);
+margin: 0;
+padding: 20px;
+transition: .5s ease right;
+}
+nav .nav-links.active{
+/* left: 77%; */
+right: 0;
+display: block;
+}
+nav .btn-wrapper{
+flex-direction: column;
+gap: 20px;
+}
+nav ul{
+display: initial;
+}
+nav ul li:nth-child(5){
+display: block;
+}
+nav ul li:nth-child(7) a, nav ul li:nth-child(8) a, nav ul li:nth-child(9) a{
+color: #35a6b6;
+}
+nav ul li a{
+font-weight: 400;
+margin-bottom: 20px;
+display: block;
+}
+nav ul li a:hover{
+border: none;
+}
+nav{
+display: flex;
+justify-content: space-between;
+}
+}

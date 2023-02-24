@@ -30,7 +30,7 @@ function myShow3(){
 
 let hiddenPara4 = document.querySelector('section#FAQs .btn-holder button:nth-child(4) div + p');
 let plus4 = document.querySelector('section#FAQs .btn-holder button:nth-child(4) div i');
-let colorChange4 = document.querySelector('section#FAQs .btn-holder button:nth-child(4) div p');2
+let colorChange4 = document.querySelector('section#FAQs .btn-holder button:nth-child(4) div p');
 
 function myShow4(){
     hiddenPara4.classList.toggle('show');
@@ -46,4 +46,48 @@ function myShow5(){
     hiddenPara5.classList.toggle('show');
     plus5.classList.toggle('rotate');
     colorChange5.classList.toggle('color');
+}
+
+
+function chngIcon(){
+    var img = document.getElementById('bars').src;
+
+    if (img.indexOf('/tiptop_files/bars.svg')!=-1){
+        document.getElementById('bars').src = './tiptop_files/close-bars.svg';
+    }
+    else{
+        document.getElementById('bars').src = './tiptop_files/bars.svg';
+    }
+
+}
+
+const hamburger = document.getElementById('bars');
+const mobileMenu =  document.querySelector('nav .nav-links');
+const menuItem =  document.querySelectorAll('nav ul li a');
+
+hamburger.addEventListener('click',()=>{
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+});
+
+menuItem.forEach(item=>{
+    item.addEventListener('click',()=>{
+        hamburger.classList.toggle('active');
+    })
+})
+
+function mute(){
+    document.querySelector('video.hero.one').toggleAttribute('muted');
+    var sound = document.querySelector('img.mute').src;
+
+    if (sound.indexOf('/tiptop_files/mute.svg')!=-1){
+        document.querySelector('img.mute').src = './tiptop_files/unmute.svg';
+    }
+    else{
+        document.querySelector('img.mute').src = './tiptop_files/mute.svg';
+    }
+}
+
+function block(){
+    document.querySelector('div.pop-up').classList.toggle('block');
 }
