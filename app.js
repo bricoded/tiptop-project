@@ -49,8 +49,8 @@ function myShow5() {
 }
 
 
-let img = document.getElementById('bars').src;
 function chngIcon() {
+    let img = document.getElementById('bars').src;
     if (img.indexOf('/tiptop_files/bars.svg') != -1) {
         document.getElementById('bars').src = './tiptop_files/close-bars.svg';
     }
