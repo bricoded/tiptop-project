@@ -73,6 +73,7 @@ img.mute{
     bottom: 10vh;
     right: 3%;
     cursor: pointer;
+    z-index: 12;
 }
 div.nav{
     width: 100%;
@@ -104,7 +105,7 @@ div.private p{
     font-weight: 700;
 }
 nav{
-    width: 100%;
+    max-width: 100%;
     display: flex;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(15px);
@@ -202,7 +203,7 @@ nav .btn-green, nav .btn-white{
 section.every-step{
     background: url(./tiptop_files/vision_lines_bg.dd950598fd6a14f1e897.png) #001B26;
     background-size: contain;
-    height: 144vh;
+    height: 1000px;
     position: relative;
 }
 div.phone{
@@ -210,8 +211,7 @@ div.phone{
     background-position: center center;
     background-size: cover;
     width: 93%;
-    min-height: 140vh;
-    padding-left: 20px;
+    padding: 50px 20px;
     border-radius: 20px;
     position: absolute;
     top: -40px;
@@ -277,7 +277,7 @@ div.items span{
 section.small-step{
     background-color: #001B26;
     padding-top: 120px;
-    min-height: 159vh;
+    height: auto;
 }
 section.small-step div.content-wrapper{
     display: flex;
@@ -436,7 +436,7 @@ div.roadmap{
 }
 /* roadmap ends */
 section.city{
-    height: 113vh;
+    height: 100%;
     background-color: #001B26;
     position: relative;
 }
@@ -515,7 +515,7 @@ section#ecosystem .ecosystem .eco-video video{
 section#FAQs{
     background-color: #001B26;
     text-align: center;
-    height: 120vh;
+    height: 700px;
     color: #fff;
     padding: 100px 40px;
 }
@@ -709,6 +709,9 @@ p.copyright{
 /* Media Querries */
 
 @media screen and (max-width: 1200px){
+    nav{
+        max-width: 100%;
+    }
     img[src="./tiptop_files/bars.svg"], img[src="./tiptop_files/close-bars.svg"]{
         display: block;
         z-index: 100;
@@ -836,7 +839,7 @@ p.copyright{
     
     /* small step starts */
     section.small-step{
-        padding: 590px 0 0 0;
+        margin-top: 300px;
     }
     header.small-step h1{
         font-size: 48px;
@@ -940,8 +943,9 @@ section div.join-us div.three-steps{
     }
     section#ecosystem .eco-info p{
         font-size: 16px;
-        width: 600px;
+        max-width: 600px;
         margin-bottom: 80px;
+        padding: 0 15px;
     }
     .btn-wrapper.one{
         margin: auto;
@@ -1055,7 +1059,10 @@ section div.join-us div.three-steps{
 /* tablet media querry ends*/
 
 /* big phone screen size */
-@media screen and (max-width:765px){
+@media screen and (max-width:768px){
+    nav{
+        width: 100%;
+    }
     .btn-white:hover{
         background-color: rgba(0, 0, 0, 0.3);
     }
@@ -1115,7 +1122,7 @@ section div.join-us div.three-steps{
 
     /* FAQs starts */
     section#FAQs .btn-holder button{
-        font-size: 16px;
+        font-size: 13px;
     }
     section#FAQs{
         height: auto;
@@ -1145,6 +1152,18 @@ section div.join-us div.three-steps{
 
 /* small phone screen size*/
 @media screen and (max-width: 560px){
+    #sneaker .container {
+        padding: 0 15px;
+    }
+    #sneaker .container .video {
+        width: 100%;
+    }
+    #sneaker .container video {
+        width: 100%;
+    }
+    section.the-team div.team-flex {
+        grid-template-columns: 1fr;
+    }
     .phone .content .btn-green, .phone .content .btn-white{
         width: 100%;
         display: block;
@@ -1166,7 +1185,7 @@ section div.join-us div.three-steps{
         margin: auto;
     }
     section#subscription .subscription h2{
-        width: 386px;
+        max-width: 386px;
     }
     section#subscription .subscription input[type="email"]{
         width: 100%;
